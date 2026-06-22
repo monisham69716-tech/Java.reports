@@ -1,0 +1,17 @@
+public class DivisionExample {
+    public static void main(String[] args) {
+
+        int num1 = 20;
+        int num2 = 0;   // divisor
+
+        try {
+            int result = num1 / num2;
+            System.out.println("Result of division: " + result);
+        } 
+        catch (ArithmeticException e) {
+            System.out.println("Error: Cannot divide by zero.");
+        }
+
+        System.out.println("Program execution completed.");
+    }
+}
