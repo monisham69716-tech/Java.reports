@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class TextCount {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the text:");
+        String text = sc.nextLine();
+
+        int characters = text.length();
+
+        int words = 0;
+        int lines = 1;
+
+        // Count words
+        String wordArray[] = text.split(" ");
+        words = wordArray.length;
+
+        // Count lines
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) == '\n') {
+                lines++;
+            }
+        }
+
+        System.out.println("Number of Characters: " + characters);
+        System.out.println("Number of Words: " + words);
+        System.out.println("Number of Lines: " + lines);
+
+        sc.close();
+    }
+}
